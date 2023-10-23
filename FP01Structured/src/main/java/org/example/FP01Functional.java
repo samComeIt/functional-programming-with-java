@@ -24,11 +24,13 @@ public class FP01Functional {
         return number%2 == 0;
     }
 
+    // number -> number%2 == 0
     private static void printEvenNumbersInListStructured(List<Integer> numbers) {
         // How to loop the numbers?
         numbers.stream()
                 //Filter - Only allow even numbers
-                .filter(FP01Functional::isEven)
+                //.filter(FP01Functional::isEven)
+                .filter(number -> number%2 == 0)//Lamdba Expression
                 .forEach(System.out::println); // Method Reference
     }
 }
